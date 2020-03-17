@@ -16,7 +16,7 @@ Java
 <ol>
   <li>When s1 and s2 are not of the same length there are characters without a mapping and hence returning false in that case.<br>
   For example, <br>Case 1: s1 = bar & s2 = fo, r in s1 doesn't have any valid mapping in s2.<br>
-  Case 2: s1 = fo & s2 = bar, s2 has an extra character but I am not sure what to consider in this case. If this were to be a valid scenerio I have explained the necessary changes required in the code in the [Possible Valid Scenerio](#possible-valid-scenerio) section below.</li>
+  Case 2: s1 = fo & s2 = bar, s2 has an extra character but I am not sure what to consider in this case. If this were to be a valid scenerio I have explained the necessary changes required in the code in the <b>Possible Valid Scenerio</b> section below.</li>
   <li>A character in s1 can be mapped with the same character in s2. For example, if s1 = mom & s2 = pop this will return true.</li>
   <li>From the example in the question: given s1 = bar and s2 = foo , print "true ", assuming that multiple characters in s1 can be mapped to the same character in s2 (a->o & r->o).</li>
 </ol>
@@ -32,3 +32,11 @@ The required changes in the code are shown below:
     }
   </code>
 </pre>
+
+## How to compile and run Java program
+Clone or download the repository.<br>
+Go to the directory or change directory to `kg_jalpaashara_2020`.<br>
+To complie the java file and generate bytcode use the following command in your terminal:
+#### `javac StringMapping.java`
+To run the program use the following command in your terminal:
+#### `java StringMapping s1 s2`
