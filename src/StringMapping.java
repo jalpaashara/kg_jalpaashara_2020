@@ -1,9 +1,5 @@
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.util.HashMap;
-import java.util.Scanner;
 
 public class StringMapping {
 	public static boolean oneToOneMapping(String s1, String s2) {
@@ -12,13 +8,15 @@ public class StringMapping {
          * I am assuming that when s1 and s2 are not of the same length there are characters without a mapping 
          * and hence returning false in that case.
          */
-		if(s1.length()!=s2.length() ||
-				(s1.length()==0 && s2.length()==0)) return false;
+		if(s1.length()!=s2.length() || (s1.length()==0 && s2.length()==0)) {
+			return false;
+		}
 		
         for (int i=0;i<s1.length();i++){
-            //System.out.println(charMap);
             if(charMap.containsKey(s1.charAt(i))){
-                if(charMap.get(s1.charAt(i))!=s2.charAt(i)) return false;
+                if(charMap.get(s1.charAt(i))!=s2.charAt(i)) {
+                	return false;
+                }
             }
             else{
                 charMap.put(s1.charAt(i),s2.charAt(i));
